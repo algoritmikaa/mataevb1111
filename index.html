@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELITECH — О компании</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="container header-grid">
+        <div class="logo">ELITECH</div>
+        <nav>
+            <a href="index.html" class="active">Главная</a>
+            <a href="obout.html">Товары</a>
+            <a href="page.html">Зачем?</a>
+            <label class="theme-toggle">
+                <input type="checkbox" id="themeSwitch">
+                <span class="icon" id="themeIcon">☀️</span>
+                <span class="label-text" id="themeLabel">Светлая</span>
+            </label>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Герой -->
+    <section class="hero" style="min-height: 100vh;">
+        <div class="container">
+            <h1>Что такое ELITECH?</h1>
+            <p>Надёжная техника для сада, дома и стройки. Создана, чтобы вы могли больше.</p>
+            <br>
+            <span class="btn" style="display: inline-block; background: #fff; color: #0b2a3b; padding: 18px 50px; font-size: 20px;">Узнать больше</span>
+        </div>
+    </section>
+
+    <!-- О бренде -->
+    <section>
+        <div class="container">
+            <div class="brand-info">
+                <div class="brand-text animate">
+                    <h2>ELITECH — качество, проверенное временем</h2>
+                    <p>Компания ELITECH более 15 лет разрабатывает электроинструменты и садовую технику. Мы объединяем инженерные решения с заботой о пользователе, чтобы каждый инструмент был надёжным и удобным.</p>
+                    <p>Наша философия — дать вам свободу творить, не думая о поломках и перегреве.</p>
+                    <ul>
+                        <li><strong>✅ Инновации</strong> — литий-ионные батареи, бесщеточные двигатели.</li>
+                        <li><strong>✅ Надёжность</strong> — двойная изоляция, защита от пыли и влаги.</li>
+                        <li><strong>✅ Доступность</strong> — лучшее соотношение цены и характеристик на рынке.</li>
+                    </ul>
+                </div>
+                <div class="brand-image animate animate-delay-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE1E97dpFHUYhJJZj9WvX_waKVkz9QjAJ2nKOZH_8q-A&s=10" alt="ELITECH завод">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section style="background: var(--bg-section-even);">
+        <div class="container">
+            <h2>Почему выбирают ELITECH</h2>
+            <div class="features-grid">
+                <div class="feature-item animate animate-delay-1">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Высокая мощность</h3>
+                    <p>Двигатели до 2200 Вт и аккумуляторы 5 А·ч для долгой работы без подзарядки.</p>
+                </div>
+                <div class="feature-item animate animate-delay-2">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Безопасность</h3>
+                    <p>Системы защиты от перегрева, перегрузки и случайного пуска — работайте спокойно.</p>
+                </div>
+                <div class="feature-item animate animate-delay-3">
+                    <div class="feature-icon">🌿</div>
+                    <h3>Экологичность</h3>
+                    <p>Низкий уровень шума и вибрации, экономия энергии до 30% по сравнению с аналогами.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section>
+        <div class="container">
+            <h2>Отзывы наших клиентов</h2>
+            <div class="testimonial animate">
+                <p>«Газонокосилка ELITECH — лучшая покупка за лето! Косит ровно, травосборник большой. Теперь газон как у короля.»</p>
+                <span>— Андрей, Московская область</span>
+            </div>
+            <div class="testimonial animate animate-delay-1">
+                <p>«Шуруповёрт просто спасает на стройке. Аккумулятора хватает на целый день, очень удобно лежит в руке.»</p>
+                <span>— Екатерина, Санкт-Петербург</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Статистика -->
+    <section style="background: var(--bg-header); color: var(--text-light);">
+        <div class="container">
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center;">
+                <div><h2 style="color: var(--accent);">15+</h2><p>лет на рынке</p></div>
+                <div><h2 style="color: var(--accent);">200+</h2><p>моделей техники</p></div>
+                <div><h2 style="color: var(--accent);">50 000+</h2><p>довольных клиентов</p></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 ELITECH — техника для ваших проектов | <a href="#">Политика конфиденциальности</a></p>
+    </div>
+</footer>
+
+<script>
+    // Скрипт для переключения темы (на всех страницах)
+    (function() {
+        const switchInput = document.getElementById('themeSwitch');
+        const icon = document.getElementById('themeIcon');
+        const label = document.getElementById('themeLabel');
+
+        // Функция установки темы
+        function setTheme(dark) {
+            document.body.classList.toggle('dark', dark);
+            if (dark) {
+                icon.textContent = '🌙';
+                label.textContent = 'Тёмная';
+            } else {
+                icon.textContent = '☀️';
+                label.textContent = 'Светлая';
+            }
+            localStorage.setItem('theme', dark ? 'dark' : 'light');
+        }
+
+        // Загрузка сохранённой темы
+        const saved = localStorage.getItem('theme');
+        if (saved === 'dark') {
+            switchInput.checked = true;
+            setTheme(true);
+        } else {
+            switchInput.checked = false;
+            setTheme(false);
+        }
+
+        // Обработчик переключения
+        switchInput.addEventListener('change', function() {
+            setTheme(this.checked);
+        });
+    })();
+</script>
+
+</body>
+</html>
