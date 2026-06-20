@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELITECH — Товары</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="container header-grid">
+        <div class="logo">ELITECH</div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="obout.html" class="active">Товары</a>
+            <a href="page.html">Зачем?</a>
+            <label class="theme-toggle">
+                <input type="checkbox" id="themeSwitch">
+                <span class="icon" id="themeIcon">☀️</span>
+                <span class="label-text" id="themeLabel">Светлая</span>
+            </label>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero" style="min-height: 80vh;">
+        <div class="container">
+            <h1>Наша техника</h1>
+            <p>Газонокосилки, шуруповёрты, пилы — всё для ваших задач</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Что мы продаём</h2>
+            <div class="products-grid">
+                <div class="product-item animate">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI0mG06aOLQcjUBdeEtWHWDba152GsdGVFKF9uxG0hYw&s=10">
+                    <h3>Газонокосилка ELITECH</h3>
+                    <p class="desc">Электрическая, ширина кошения 42 см, травосборник 50 л, регулировка высоты (25-75 мм). Мягкий старт, складная ручка для хранения.</p>
+                    <p class="price">8 990 ₽</p>
+                    <span class="btn">Подробнее</span>
+                </div>
+                <div class="product-item animate animate-delay-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRVx0ksa_v6Sos00xUG6OnJFiTUXsuRPvZSmjyOq4MWw&s=10">
+                    <h3>Шуруповёрт ELITECH</h3>
+                    <p class="desc">Аккумуляторный 18 В, 2 батареи 2.0 А·ч, быстрозажимной патрон, светодиодная подсветка, 24 ступени крутящего момента.</p>
+                    <p class="price">5 490 ₽</p>
+                    <span class="btn">Подробнее</span>
+                </div>
+                <div class="product-item animate animate-delay-2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl0gkdTGE-pio2RdDMI31VoONhOpBj1oKAkM1jdabulA&s=10">
+                    <h3>Цепная пила ELITECH</h3>
+                    <p class="desc">Электрическая 2000 Вт, шина 40 см, автоматическая смазка цепи, защита от отдачи, тормоз цепи за 0,1 с.</p>
+                    <p class="price">7 290 ₽</p>
+                    <span class="btn">Подробнее</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--bg-section-even);">
+        <div class="container">
+            <h2>Аксессуары в наличии</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+                <div style="background: var(--bg-card); padding: 25px; border-radius: 30px; text-align: center; flex: 1 1 200px; border: 1px solid var(--border-color);">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnPsQi_IVEAtAsyXYQb3iCsyoep7MT-Hiyr0G_DEowkQ&s=10" style="width:100%; border-radius: 20px;">
+                    <h4 style="color: var(--text-primary);">Аккумулятор 5 А·ч</h4>
+                    <p style="color: var(--text-secondary);">4 990 ₽</p>
+                </div>
+                <div style="background: var(--bg-card); padding: 25px; border-radius: 30px; text-align: center; flex: 1 1 200px; border: 1px solid var(--border-color);">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZjRhBhiCiKPyFpxqNDGb7PREba2_hd2lFia5ia7mWmw&s=10" style="width:100%; border-radius: 20px;">
+                    <h4 style="color: var(--text-primary);">Зарядное устройство</h4>
+                    <p style="color: var(--text-secondary);">1 290 ₽</p>
+                </div>
+                <div style="background: var(--bg-card); padding: 25px; border-radius: 30px; text-align: center; flex: 1 1 200px; border: 1px solid var(--border-color);">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG5S4krjLmxWE0Ng32lvn27klYXcRYEAtH-_KASF35zw&s style="width:100%; border-radius: 20px;">
+                    <h4 style="color: var(--text-primary);">Набор цепей (3 шт)</h4>
+                    <p style="color: var(--text-secondary);">1 890 ₽</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 ELITECH — техника для ваших проектов | <a href="#">Каталог</a></p>
+    </div>
+</footer>
+
+<script>
+    (function() {
+        const switchInput = document.getElementById('themeSwitch');
+        const icon = document.getElementById('themeIcon');
+        const label = document.getElementById('themeLabel');
+
+        function setTheme(dark) {
+            document.body.classList.toggle('dark', dark);
+            if (dark) {
+                icon.textContent = '🌙';
+                label.textContent = 'Тёмная';
+            } else {
+                icon.textContent = '☀️';
+                label.textContent = 'Светлая';
+            }
+            localStorage.setItem('theme', dark ? 'dark' : 'light');
+        }
+
+        const saved = localStorage.getItem('theme');
+        if (saved === 'dark') {
+            switchInput.checked = true;
+            setTheme(true);
+        } else {
+            switchInput.checked = false;
+            setTheme(false);
+        }
+
+        switchInput.addEventListener('change', function() {
+            setTheme(this.checked);
+        });
+    })();
+</script>
+
+</body>
+</html>
