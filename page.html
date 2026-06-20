@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELITECH — Зачем?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="container header-grid">
+        <div class="logo">ELITECH</div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="obout.html">Товары</a>
+            <a href="page.html" class="active">Зачем?</a>
+            <label class="theme-toggle">
+                <input type="checkbox" id="themeSwitch">
+                <span class="icon" id="themeIcon">☀️</span>
+                <span class="label-text" id="themeLabel">Светлая</span>
+            </label>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero" style="min-height: 80vh;">
+        <div class="container">
+            <h1>Зачем тебе всё это?</h1>
+            <p>Инструменты ELITECH — это не просто покупка, это ключ к новым возможностям.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>5 причин выбрать нашу технику</h2>
+            <div class="reasons-grid">
+                <div class="reason-item animate">
+                    <h3>🌱 Идеальный газон за 30 минут</h3>
+                    <p>Газонокосилка с широким захватом и мощным двигателем превратит стрижку в удовольствие. Больше не нужно нанимать садовника — справитесь сами.</p>
+                </div>
+                <div class="reason-item animate animate-delay-1">
+                    <h3>🔨 Ремонт без вызова мастеров</h3>
+                    <p>Шуруповёрт и пила помогут собрать мебель, повесить полки, построить беседку или сделать перепланировку. Экономия на услугах — до 50 000 ₽ в год.</p>
+                </div>
+                <div class="reason-item animate animate-delay-2">
+                    <h3>🎨 Реализация творческих идей</h3>
+                    <p>Изготовление деревянных поделок, садовых фигур, кормушек для птиц — с ELITECH вы станете настоящим мастером на все руки.</p>
+                </div>
+                <div class="reason-item animate animate-delay-3">
+                    <h3>⏱️ Экономия времени и сил</h3>
+                    <p>Лёгкие, эргономичные инструменты с долгим временем работы от аккумулятора позволяют сделать больше за меньшее время.</p>
+                </div>
+                <div class="reason-item animate" style="border-left-color: var(--accent);">
+                    <h3>💰 Долгосрочная выгода</h3>
+                    <p>Надёжность и ремонтопригодность техники ELITECH гарантируют, что вы не будете тратиться на частые замены. Это вложение на годы вперёд.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--bg-section-even);">
+        <div class="container">
+            <h2>Посмотрите, как это работает</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+                <div style="background: var(--bg-card); border-radius: 30px; padding: 20px; max-width: 500px; flex: 1; border: 1px solid var(--border-color);">
+                    <img src="https://rutube.ru/api/video/preview/fedfdfba415e6810faa98a4443b7ae53/?width=500" alt="Видео газонокосилка" style="width:100%; border-radius: 20px;">
+                    <p style="text-align:center; margin-top: 10px; font-weight: 600; color: var(--text-primary);">Газонокосилка в деле</p>
+                </div>
+                <div style="background: var(--bg-card); border-radius: 30px; padding: 20px; max-width: 500px; flex: 1; border: 1px solid var(--border-color);">
+                    <img src="https://pic.rtbcdn.ru/video/7d/9e/7d9ea0cc6ee15934ebcf4d0d552c7283.jpg?width=500" alt="Видео шуруповёрт" style="width:100%; border-radius: 20px;">
+                    <p style="text-align:center; margin-top: 10px; font-weight: 600; color: var(--text-primary);">Шуруповёрт — быстро и точно</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--bg-header); color: var(--text-light);">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: var(--accent);">Готовы начать?</h2>
+            <p style="font-size: 22px; max-width: 700px; margin: 20px auto;">Выберите свой инструмент ELITECH и почувствуйте разницу. Качественная техника меняет подход к работе.</p>
+            <br>
+            <span class="btn" style="background: var(--accent); color: #0b2a3b; padding: 18px 60px; font-size: 22px;">Перейти в каталог</span>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 ELITECH — техника для ваших проектов | <a href="#">Контакты</a></p>
+    </div>
+</footer>
+
+<script>
+    (function() {
+        const switchInput = document.getElementById('themeSwitch');
+        const icon = document.getElementById('themeIcon');
+        const label = document.getElementById('themeLabel');
+
+        function setTheme(dark) {
+            document.body.classList.toggle('dark', dark);
+            if (dark) {
+                icon.textContent = '🌙';
+                label.textContent = 'Тёмная';
+            } else {
+                icon.textContent = '☀️';
+                label.textContent = 'Светлая';
+            }
+            localStorage.setItem('theme', dark ? 'dark' : 'light');
+        }
+
+        const saved = localStorage.getItem('theme');
+        if (saved === 'dark') {
+            switchInput.checked = true;
+            setTheme(true);
+        } else {
+            switchInput.checked = false;
+            setTheme(false);
+        }
+
+        switchInput.addEventListener('change', function() {
+            setTheme(this.checked);
+        });
+    })();
+</script>
+
+</body>
+</html>
